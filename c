@@ -20,4 +20,22 @@ int main() {
 
     return 0;
 }
+#include <stdio.h>
+
+void calculate_factorial(int *n, int *result) {
+    *result = 1;
+    for (int i = 1; i <= *n; i++) {
+        *result *= i;
+    }
+}
+
+int main() {
+    int num, fact;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    calculate_factorial(&num, &fact);
+    printf("Factorial of %d is %d\n", num, fact);
+    return 0;
+}
 
